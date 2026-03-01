@@ -1,0 +1,31 @@
+{
+  "name": "Projeto Academico - Next.js",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dsznajder.es7-react-js-snippets", // Atalhos rápidos para criar componentes React
+        "dbaeumer.vscode-eslint",          // Mostra erros de padrão de código JS/TS
+        "esbenp.prettier-vscode",         // Formata o código (alinhamento, aspas) ao salvar
+        "bradlc.vscode-tailwindcss",       // Autocomplete inteligente para o Tailwind CSS
+        "christian-kohler.path-intellisense", // Sugere nomes de arquivos ao importar no código
+        "eamodio.gitlens",                 // Mostra quem escreveu cada linha (essencial para Code Review)
+        "formulahendry.auto-rename-tag",   // Muda a tag de fechamento HTML se você mudar a de abertura
+        "streetsidesoftware.code-spell-checker-portuguese", // Corretor ortográfico para PT-BR
+        "usernamehw.errorlens"             // Exibe erros do código direto na linha, sem precisar passar o mouse
+      ],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,      // Salva e formata automaticamente (padrão do time)
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        "tailwindCSS.emmetCompletions": true
+      }
+    }
+  },
+  // Abre a porta 3000 do Codespace para você ver o site no seu navegador
+  "forwardPorts": [3000],
+  // Comando que roda assim que o container é criado (instala as bibliotecas do projeto)
+  "postCreateCommand": "npm install"
+}
